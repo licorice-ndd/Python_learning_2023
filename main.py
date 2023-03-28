@@ -206,9 +206,29 @@ print(num_int + num_str)
 # Viết chương trình chấp nhận một chuỗi số, phân tách bằng dấu phẩy từ giao diện điều khiển,
 # tạo ra một danh sách và một tuple chứa mọi số.
 
-print("bai 4--------")
-values=input("Nhập vào các giá trị:")
-l=values.split(",")
-t=tuple(l)
-print (l)
-print (t)
+# print("bai 4--------")
+# values = input("Nhập vào các giá trị : ")
+# l = values.split(",")
+# t = tuple(l)
+# print (l)
+# print (t)
+
+# EX 5
+# Định nghĩa một class có ít nhất 2 method:
+# getString: để nhận một chuỗi do người dùng nhập vào từ giao diện điều khiển.
+# printString: in chuỗi vừa nhập sang chữ hoa.
+# Thêm vào các hàm kiểm tra đơn giản để kiểm tra method của class.
+# Chuỗi nhập vào là nguyenduy.com thì đầu ra phải là: NGUYENDUY.COM
+# Sử dụng __init__ để xây dựng các tham số.
+
+# print("bai 5--------")
+class InputToUpperCase(object):
+    def __int__(self):
+        self.s = ""
+    def getString(self):
+        self.s = input("Enter string want to upgrade : ")
+    def printString(self):
+        print(self.s.upper())
+strObj = InputToUpperCase()
+strObj.getString()
+strObj.printString()
