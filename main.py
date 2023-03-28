@@ -170,21 +170,45 @@ print(num_int + num_str)
 # nằm trong đoạn 2000 và 3200 (tính cả 2000 và 3200).
 # Các số thu được sẽ được in thành chuỗi trên một dòng, cách nhau bằng dấu phẩy.
 
-j = [] #Tạo một danh sách rỗng để lưu kết quả
-for i in range (2000,3200):             #Duyệt qua tất cả các số trong đoạn từ 2000 đến 3200
-    if (i % 7 == 0) and (i %5 != 0):    #Kiểm tra xem số i có chia hết cho 7 và không phải là bội số của 5 không
-        j.append(str(i))                #Nếu đúng, thì thêm số i vào danh sách result
-print("--- de answer")
-print(','.join(j))                      #In ra màn hình danh sách result, các phần tử cách nhau bằng dấu phẩy
+# print("bai 1--------")
+# j = [] #Tạo một danh sách rỗng để lưu kết quả
+# for i in range (2000,3200):             #Duyệt qua tất cả các số trong đoạn từ 2000 đến 3200
+#     if (i % 7 == 0) and (i %5 != 0):    #Kiểm tra xem số i có chia hết cho 7 và không phải là bội số của 5 không
+#         j.append(str(i))                #Nếu đúng, thì thêm số i vào danh sách result
+# print("--- de answer")
+# print(','.join(j))                      #In ra màn hình danh sách result, các phần tử cách nhau bằng dấu phẩy
 
 # EX 2
 # Viết một chương trình có thể tính giai thừa của một số cho trước.
 # Kết quả được in thành chuỗi trên một dòng, phân tách bởi dấu phẩy.
 # Ví dụ, số cho trước là 8 thì kết quả đầu ra phải là 40320.
 
-x = int(input("enter de number of giai thua : "))
-def fact(x):
-    if x == 0:
-        return 1
-    return x * fact(x - 1)
-print(fact(x))
+# print("bai 2--------")
+# x = int(input("enter de number of giai thua : "))
+# def fact(x):                            # def = khai báo hàm , fact(x) tính giai thừa của 1 số nguyên dương x
+#     if x == 0:
+#         return 1
+#     return x * fact(x - 1)
+# print(fact(x))
+
+# EX 3
+# Với số nguyên n nhất định, hãy viết chương trình để tạo ra một dictionary chứa (i, i*i)
+# như là số nguyên từ 1 đến n (bao gồm cả 1 và n) sau đó in ra dictionary này.
+
+# print("bai 3--------")
+# n = int(input("enter de number : "))
+# d = dict()
+# for i in range(1,n+1):
+#     d[i] = i*i
+# print(d)
+
+# EX 4
+# Viết chương trình chấp nhận một chuỗi số, phân tách bằng dấu phẩy từ giao diện điều khiển,
+# tạo ra một danh sách và một tuple chứa mọi số.
+
+print("bai 4--------")
+values=input("Nhập vào các giá trị:")
+l=values.split(",")
+t=tuple(l)
+print (l)
+print (t)
