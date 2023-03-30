@@ -1,5 +1,57 @@
 # how to use str in py : str = represent for string byte convert int to string
 
+# retake fall Hoalac 2022
+# Q1
+# an ordered number is a number in which the digits in the number appear in the ascending order. For example 12345 is an ordered number but 14235 is not.
+# write a program that will accept an positive integeral number then print out "true" if the number is an ordered number, otherwise print out "false"
+# if the user enters anything other than a positive integeral number put out an appropriate message and ignore the number. for example
+# Enter an intergeral number : -1234
+# please enter an positive intergeral number
+# Enter an intergeral number : 12345
+# true
+# Enter an intergeral number : 13524
+# false
+
+# Q1 solu
+# def isAscending(n):
+#     if n < 10:
+#         return True
+#     while n > 0:
+#         last1 = n % 10
+#         n //= 10
+#         last2 = n % 10
+#         if last1 < last2:
+#             return False
+#     return True
+# while True:
+#     try:
+#         n = int(input('Enter a positive integer: '))
+#         if isinstance(n, int) and n > 0:
+#             break
+#         else:
+#             print('Please enter a positive integer.')
+#     except:
+#         print('Please enter a positive integer.')
+# if isAscending(n):
+#     print('True')
+# else:
+#     print('False')
+
+# Q2 solu
+
+file = input("Enter file: ")
+f = open(file, "r")
+line = f.readline()
+print('The content of the file:',line)
+A = line.split(' ')
+list_null=[]
+for i in A:
+    list_null.append(int(i))
+def Average(lst):
+    return sum(lst) / len(lst)
+average = Average(list_null)
+print('Avg =',average)
+                
 #khai bao bien trong python
 """""
 domain = "mr a welcome"
@@ -222,13 +274,20 @@ print(num_int + num_str)
 # Sử dụng __init__ để xây dựng các tham số.
 
 # print("bai 5--------")
-class InputToUpperCase(object):
-    def __int__(self):
-        self.s = ""
-    def getString(self):
-        self.s = input("Enter string want to upgrade : ")
-    def printString(self):
-        print(self.s.upper())
-strObj = InputToUpperCase()
-strObj.getString()
-strObj.printString()
+# class InputToUpperCase(object):
+#     def __int__(self):
+#         self.s = ""
+#     def getString(self):
+#         self.s = input("Enter string want to upgrade : ")
+#     def printString(self):
+#         print(self.s.upper())
+# strObj = InputToUpperCase()
+# strObj.getString()
+# strObj.printString()
+
+# EX 6 find square x
+
+# x = int(input("enter de number : "))
+# def square(num):
+#     return num ** 2
+# print(square(x))
