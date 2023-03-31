@@ -1,0 +1,5 @@
+SID	Subject Name
+DB	Database
+JP	Java Programming
+MA	Mathmetics
+EN	English

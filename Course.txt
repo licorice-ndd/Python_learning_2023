@@ -1,0 +1,6 @@
+CID	CName		SID
+DB01	Database 01	DB		
+DB02	Database 01	DB		
+JP01	Java 01	JP	
+EN01	English 01	EN	
+EN02	English 02	EN	

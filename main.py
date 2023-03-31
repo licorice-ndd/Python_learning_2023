@@ -39,19 +39,124 @@
 
 # Q2 solu
 
-file = input("Enter file: ")
-f = open(file, "r")
-line = f.readline()
-print('The content of the file:',line)
-A = line.split(' ')
-list_null=[]
-for i in A:
-    list_null.append(int(i))
-def Average(lst):
-    return sum(lst) / len(lst)
-average = Average(list_null)
-print('Avg =',average)
-                
+# file = input("Enter file: ")                # This line prompts the user to enter the name of a file and stores the input in the variable
+# f = open(file, "r")                         # This line opens the file specified by the user in read-only mode ("r") and assigns the file object to the variable 'f'. If the file cannot be opened, an error will be raised.
+# line = f.readline()                         # This line reads the first line of the file (f) and assigns it to the variable line. If the file is empty, this line will set line to an empty string.
+# print('The content of the file:',line)
+# A = line.split(' ')                         # This line splits the string in line into a list of substrings at every space character (' ') and assigns the list to the variable A.
+# list_null=[]                                # This line initializes an empty list called list_null.
+# for i in A:                                 # This loop iterates over each substring (i) in the list A,
+#     list_null.append(int(i))                # converts it to an integer using the int() function, and appends the integer to the list list_null.
+# def Average(lst):
+#     return sum(lst) / len(lst)
+# average = Average(list_null)
+# print('Avg =',average)
+
+# Q3 solu
+# write a program to manage list of course list of a school using database file Course.sqlite
+# the program read data from the file subject.txt and course.txt and then save to the tables subject and course respectively
+# subject(sid, sname) course (cid, cname, sid)
+# the program prints the course list which belong to "database" or "english" subject
+# and sorted in ascending order by cname
+
+# import sqlite3
+# import re
+# lines = open('Course.txt', 'r')
+# conn = sqlite3.connect('COURSE.sqlite')
+# conn.executescript(
+# '''
+# drop table if exists Course;
+# create table Course(
+# CID text not null ,
+# CName text not null,
+# SID text not null
+# );
+# '''
+# )
+# count = 1
+# for line in lines:
+#     if count == 1:
+#         count = count + 1
+#         continue
+#     else:
+#         fields = re.split('\\s+', line)
+#         conn.execute('insert into Course values (?, ?, ?);', (fields[0], fields[1]+' '+fields[2], fields[3]))
+#         lines2 = open('Subject.txt', 'r')
+#         conn.executescript(
+#             '''
+#             drop table if exists Subject;
+#             create table Subject(
+#             SID text not null ,
+#             SName text not null
+#             );
+#             '''
+#         )
+# count = 1
+# for line in lines2:
+#     if count == 1:
+#         count = count + 1
+#         continue
+#     else:
+#         fields = re.split('\\s+', line)
+#         conn.execute('insert into Subject values (?, ?);', (fields[0], fields[1]))
+#         conn.commit()
+#         table = conn.execute('select c.CID, c.CName, s.SName from Subject s join Course c on s.SID = c.SID '
+#                                 'where SName = ? or SName = ? '
+#                                 'order by SName asc', ('Database', 'English'))
+# print("Course list:")
+# print("ID".ljust(10, ' '), "Course Name".rjust(10, ' '), "Subject Name".rjust(10, ' '))
+# for row in table:
+#     print(str(row[0]).ljust(10, ' '), str(row[1]).rjust(10, ' '), str(row[2]).rjust(10, ' '))
+
+
+# pe 4-12-2022
+# Q1 you are required to develop a python program that will throw two
+# dice until the top faces of the two dice total to a specified number
+# the output belike
+# enter an integer number of total : 8
+# dice thrower
+# ============
+# result of throw : 1 1 + 3
+# result of throw : 2 6 + 5
+# result of throw : 3 4 + 3
+# result of throw : 4 6 + 2
+# you got ur total in 4 throws
+
+# Q1 solu
+# import random
+# while True:
+#     n = int(input("Enter an integer number of total: "))
+#     if n < 2 or n >12:
+#         print("Total of 2 dices must in range 2, 12")
+#     else:
+#         break
+# count = 1
+# while True:
+#     n1 = random.randint(1, 6)
+#     n2 = random.randint(1, 6)
+#     print(f"Result of throw : {count} _ {n1}+{n2}")
+#     if n1+n2 == n:
+#         break
+#     else:
+#         count = count +1
+# print(f"Your got your total in {count} throws")
+# Text.txt
+# Q2 read file and combinations number in that
+# file = input("Enter file: ")
+# f = open(file, "r")
+# line = f.readline()
+# A = line.split(', ')
+# print(f'The original list from the file is: {A}')
+# num_list = []
+# n = len(A)
+# for i in range (n-1):
+#     for j in range (i+1, n):
+#         num = 10*int(A[i]) + int(A[j])
+#         num_list.append(num)
+# print(num_list)
+
+# (PE) SPRING 22 CA 13H-16H30
+
 #khai bao bien trong python
 """""
 domain = "mr a welcome"
