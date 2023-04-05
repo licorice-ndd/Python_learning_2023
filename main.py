@@ -6,7 +6,7 @@
 # write a program that will accept an positive integeral number then print out "true" if the number is an ordered number, otherwise print out "false"
 # if the user enters anything other than a positive integeral number put out an appropriate message and ignore the number. for example
 # Enter an intergeral number : -1234
-# please enter an positive intergeral number
+# please enter a positive intergeral number
 # Enter an intergeral number : 12345
 # true
 # Enter an intergeral number : 13524
@@ -396,3 +396,116 @@ print(num_int + num_str)
 # def square(num):
 #     return num ** 2
 # print(square(x))
+
+# Ex 7
+# Python có nhiều hàm được tích hợp sẵn, nếu không biết cách sử dụng nó, bạn có thể đọc tài liệu trực tuyến hoặc tìm vài cuốn sách.
+# Nhưng Python cũng có sẵn tài liệu về hàm cho mọi hàm tích hợp trong Python.
+# Yêu cầu của bài tập này là viết một chương trình để in tài liệu về một số hàm Python được tích hợp sẵn như abs(), int(), input() và thêm tài liệu cho hàm bạn tự định nghĩa.
+
+# print (abs.__doc__)
+# print (int.__doc__)
+# print (input.__doc__)
+# def square(num):
+#  return num ** 2
+# print (square.__doc__)
+
+# Ex 8
+# Defines a class that includes a class parameter and the same instance parameter
+
+# class Person:
+#     # định nghĩ class "name"
+#     name = "Person"
+#     def __init__(self, name = None):
+#         self.name = name               # self.name là biến instance
+# mra = Person("MrA")
+# print("%s name is %s" % (Person.name, mra.name))
+# mrb = Person()
+# mrb.name = "MrB"
+# print("%s name is %s" % (Person.name, mrb.name))
+
+# Ex 9
+# Calculate age based on the date of birth entered. dateofbirth enter or smth else
+
+# import datetime
+# print("enter ur date to calculate age")
+# day = int(input("Day : "))
+# month = int(input("Month : "))
+# year = int(input("Year : "))
+#
+# current_day = datetime.date.today().day
+# current_month = datetime.date.today().month
+# current_year = datetime.date.today().year
+#
+# age_day = abs(current_day - day)
+# age_month = abs(current_month - month)
+# age_year = current_year - year
+#
+# print("your age exactly : ",age_day,"days ",age_month,"months",age_year,"years old")
+
+# Ex 10
+# Viết chương trình nhập: số giờ làm mỗi tuần, thù lao trên mỗi giờ làm tiêu chuẩn, từ đó tính ra số tiền thực lĩnh của nhân viên.
+# Biết rằng: số giờ tiêu chuẩn mỗi tuần là 44 giờ, và mỗi giờ vượt chuẩn được trả gấp rưỡi so với giờ làm chuẩn.
+# Write a program to input: the number of hours worked per week, the standard hourly remuneration, from which to calculate the actual amount of the employee's salary.
+# Know that: the standard hours per week are 44 hours, and each overtime hour is paid one-and-a-half times the standard hourly rate.
+# or input de gio tieu chuan
+
+# so_gio_lam = float(input("Nhap so gio lam moi tuan : "))
+# luong_gio = float(input("Nhap thu lao tren moi gio lam tieu chuan : "))
+#
+# gio_tieu_chuan = 44
+# gio_tieu_chuan_input = int(input("nhap so gio tieu chuan : "))
+#
+# gio_vuot_chuan = max(0, so_gio_lam - gio_tieu_chuan)
+# gio_vuot_chuan_input = max(0, so_gio_lam - gio_tieu_chuan_input)
+#
+# final_salary = gio_vuot_chuan * luong_gio + gio_vuot_chuan * luong_gio * 1.5
+# final_salary_input = gio_vuot_chuan_input * luong_gio + gio_vuot_chuan_input * luong_gio * 1.5
+# print(f"Last salary per month : {final_salary}")
+# print(f"Last salary per month : {final_salary_input}")
+
+# Ex 11
+# Viết chương trình và in giá trị theo công thức cho trước: Q = √([(2 * C * D)/H]) (bằng chữ: Q bằng căn bậc hai của [(2 nhân C nhân D) chia H].
+# Với giá trị cố định của C là 50, H là 30. D là dãy giá trị tùy biến, được nhập vào từ giao diện người dùng, các giá trị của D được phân cách bằng dấu phẩy.
+# Ví dụ: Giả sử chuỗi giá trị của D nhập vào là 100,150,180 thì đầu ra sẽ là 18,22,24.
+# Gợi ý:
+# Nếu đầu ra nhận được là một số dạng thập phân, bạn cần làm tròn thành giá trị gần nhất, ví dụ 26.0 sẽ được in là 26.
+# Trong trường hợp dữ liệu đầu vào được cung cấp cho câu hỏi, nó được giả định là đầu vào do người dùng nhập từ giao diện điều khiển.
+
+# import math
+# c = 50
+# h = 30
+# value = []
+# items = [x for x in input("nhap gia tri d : ").split(',')]
+# for d in items:
+#     value.append(str(int(round(math.sqrt(2*c*float(d)/h)))))
+# print(', '.join(value))
+
+# Ex 12
+# Viết một chương trình có 2 chữ số, X, Y nhận giá trị từ đầu vào và tạo ra một mảng 2 chiều.
+# Giá trị phần tử trong hàng thứ i và cột thứ j của mảng phải là i*j.
+# Lưu ý: i=0,1,...,X-1; j=0,1,...,Y-1.
+# Ví dụ: Giá trị X, Y nhập vào là 3,5 thì
+# đầu ra là: [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
+
+# input_str = input("nhap x, y : ")
+# dimensions = [int(x) for x in input_str.split(',')]
+# rowNum = dimensions[0]
+# colNum = dimensions[1]
+# multilist = [[0 for col in range(colNum)] for row in range(rowNum)]
+# for row in range(rowNum):
+#     for col in range(colNum):
+#         multilist[row][col] = row * col
+# print(multilist)
+
+# Ex 13
+# Viết một chương trình chấp nhận chuỗi từ do người dùng nhập vào, phân tách nhau bởi dấu phẩy và
+# in những từ đó thành chuỗi theo thứ tự bảng chữ cái, phân tách nhau bằng dấu phẩy.
+# Giả sử đầu vào được nhập là: without,hello,bag,world, thì
+# đầu ra sẽ là: bag,hello,without,world.
+
+input_str = input("Nhập một chuỗi các phần tử, cách nhau bởi dấu phẩy: ")
+items = [x.strip() for x in input_str.split(',')]
+items.sort()
+items.reverse() # if dont do dis one, the string will set by alphabet, else will set by alphabet
+output_str = ','.join(items)
+print(output_str)
