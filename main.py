@@ -161,17 +161,14 @@
 """""
 domain = "mr a welcome"
 print(domain)
-
 linkwebsite = "https://soundcloud.com/cocailon/tracks"
 print(linkwebsite)
-
 """""
 #xoa bien trong python : xóa xong thì print sẽ bị lỗi
 """""
 delete_bien = "checked or unchecked"
 del delete_bien
 print(delete_bien)
-
 """""
 # các kiểu comment
 # 1 line
@@ -191,42 +188,31 @@ print(str[2:5])  # In phần tử thứ 3 đến thứ 6, tại vì chỉ mục 
 print(str[2:])  # In từ vị trí thứ 3 đến cuối chuỗi
 print(str * 2)  # In chuỗi hai lần :  dấu * để lặp chuỗi
 print(str + "TEST")  # Nối chuỗi : dấu + để nối chuỗi
-
 """""
 
 # kiểu dữ liệu list
 """""
-
 domains = ["freetuts.net", "kephimonline.com", "zip.freeetuts.net"]
 infor1 = ["cuong", 31]
 infor2 = {'name': 'Cường','domain': 'freetuts.net', 'age': 31}
 print(domains)
-
 """""
 # ép kiểu data
 # 1. ép kiểu ngầm
 """""
-
 num_int = 123
 num_flo = 1.23
-
 num_new = num_int + num_flo
-
 print("Kiểu dữ liệu của num_int:", type(num_int))
 print("Kiểu dữ liệu của num_flo:", type(num_flo))
-
 print("Giá trị của num_new:", num_new)
 print("Kiểu dữ liệu của num_new:", type(num_new))
-
 num_int = 123
 num_str = "456"
-
 print("Kiểu dữ liệu của num_int:", type(num_int))
 print("Kiểu dữ liệu của num_str:", type(num_str))
-
 # Dòng này sẽ lỗi vì string và number không chuyển ngầm được
 print(num_int + num_str)
-
 """""
 
 # 2. ép kiểu public
