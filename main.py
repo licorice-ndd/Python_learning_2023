@@ -495,3 +495,25 @@ items.sort()
 items.reverse() # if dont do dis one, the string will set by alphabet, else will set by alphabet
 output_str = ','.join(items)
 print(output_str)
+
+# EX 14
+# Trong trường hợp dữ liệu đầu vào được nhập vào chương trình nó nên được giả định là dữ liệu được người dùng nhập vào từ giao diện điều khiển.
+
+lines = []
+while True:
+   s = input()
+   if s:
+      lines.append(s.upper())
+   else:
+      break;
+for sentence in lines:
+    print(sentence)
+
+# EX 15
+# Viết một chương trình chấp nhận đầu vào là một chuỗi các từ tách biệt bởi khoảng trắng, loại bỏ các từ trùng lặp, sắp xếp theo thứ tự bảng chữ cái, rồi in chúng.
+# Giả sử đầu vào là: hello world and practice makes perfect and hello world again
+# Thì đầu ra là: again and hello makes perfect practice world
+
+s = input("Nhập chuỗi của bạn: ")
+words = [word for word in s.split(" ")]
+print(" ".join(sorted(list(set(words)))))
