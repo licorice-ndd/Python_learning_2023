@@ -489,31 +489,312 @@ print(num_int + num_str)
 # Giả sử đầu vào được nhập là: without,hello,bag,world, thì
 # đầu ra sẽ là: bag,hello,without,world.
 
-input_str = input("Nhập một chuỗi các phần tử, cách nhau bởi dấu phẩy: ")
-items = [x.strip() for x in input_str.split(',')]
-items.sort()
-items.reverse() # if dont do dis one, the string will set by alphabet, else will set by alphabet
-output_str = ','.join(items)
-print(output_str)
+# input_str = input("Nhập một chuỗi các phần tử, cách nhau bởi dấu phẩy: ")
+# items = [x.strip() for x in input_str.split(',')]
+# items.sort()
+# items.reverse() # if dont do dis one, the string will set by alphabet, else will set by alphabet
+# output_str = ','.join(items)
+# print(output_str)
 
 # EX 14
-# Trong trường hợp dữ liệu đầu vào được nhập vào chương trình nó nên được giả định là dữ liệu được người dùng nhập vào từ giao diện điều khiển.
+# Trong trường hợp dữ liệu đầu vào được nhập vào chương trình nó nên được giả định
+# là dữ liệu được người dùng nhập vào từ giao diện điều khiển.
 
-lines = []
-while True:
-   s = input()
-   if s:
-      lines.append(s.upper())
-   else:
-      break;
-for sentence in lines:
-    print(sentence)
+# lines = []
+# while True:
+#    s = input()
+#    if s:
+#       lines.append(s.upper())
+#    else:
+#       break;
+# for sentence in lines:
+#     print(sentence)
 
 # EX 15
 # Viết một chương trình chấp nhận đầu vào là một chuỗi các từ tách biệt bởi khoảng trắng, loại bỏ các từ trùng lặp, sắp xếp theo thứ tự bảng chữ cái, rồi in chúng.
 # Giả sử đầu vào là: hello world and practice makes perfect and hello world again
 # Thì đầu ra là: again and hello makes perfect practice world
 
-s = input("Nhập chuỗi của bạn: ")
-words = [word for word in s.split(" ")]
-print(" ".join(sorted(list(set(words)))))
+# s = input("Nhập chuỗi của bạn: ")
+# words = [word for word in s.split(" ")]
+# print(" ".join(sorted(list(set(words)))))
+
+# EX 16
+# Viết một chương trình chấp nhận đầu vào là chuỗi các số nhị phân 4 chữ số, phân tách bởi dấu phẩy, kiểm tra xem chúng có chia hết cho 5 không.
+# Sau đó in các số chia hết cho 5 thành dãy phân tách bởi dấu phẩy.
+# Ví dụ đầu vào là: 0100,0011,1010,1001
+# Đầu ra sẽ là: 1010
+
+# value = []
+# items = [x for x in input("Nhập các số nhị phân: ").split(',')]
+# for p in items:
+#     intp = int(p, 2)
+#     if not intp%5:
+#         value.append(p)
+# print(','.join(value))
+
+# EX 17
+# Viết một chương trình tìm tất cả các số trong đoạn 1000 và 3000 (tính cả 2 số này) sao cho tất cả
+# các chữ số trong số đó là số chẵn.
+# In các số tìm được thành chuỗi cách nhau bởi dấu phẩy, trên một dòng.
+
+# values = []
+# for i in range(1000, 3001):
+#     s = str(i)
+#     if (int(s[0]) % 2 == 0) and (int(s[1]) % 2 == 0) and (int(s[2]) % 2 == 0) and (int(s[3]) % 2 == 0): # this line will check 4 number in str and goin wrong, replace by (int(s[3]) % 2 == 0)
+#         values.append(s)
+#
+# print(",".join(values))
+
+# EX 18
+# Viết một chương trình chấp nhận đầu vào là một câu, đếm số chữ cái và chữ số trong câu đó.
+# Giả sử đầu vào sau được cấp cho chương trình: hello world! 123
+# Thì đầu ra sẽ là:
+# Số chữ cái là: 10
+# Số chữ số là: 3
+
+# s = input(" Nhập câu của bạn: ")
+# d = {"DIGITS": 0, "LETTERS": 0,  "CHAC": 0}
+# for c in s:
+#     if c.isdigit():
+#         d["DIGITS"] += 1
+#     elif c.isnumeric():
+#         d["CHAC"] += 1
+#     elif c.isalpha():
+#         d["LETTERS"] += 1.
+#     else:
+#         pass
+# print("Số chữ cái là:", d["LETTERS"])
+# print("Số chữ số là:", d["DIGITS"])
+# print("Số ki hieu là:", d["CHAC"])
+
+# EX 19
+# count uppercase and lowercase
+
+# s = input("Nhập câu của bạn: ")
+# d = {"UPPER CASE": 0, "LOWER CASE": 0}
+# for c in s:
+#     if c.isupper():
+#         d["UPPER CASE"] += 1
+#     elif c.islower():
+#         d["LOWER CASE"] += 1
+#     else:
+#         pass
+# print("Chữ hoa:", d["UPPER CASE"])
+# print("Chữ thường:", d["LOWER CASE"])
+
+# EX 20
+# Viết một chương trình tính giá trị của a+aa+aaa+aaaa với a là số được nhập vào bởi người dùng.
+# Giả sử a được nhập vào là 1 thì đầu ra sẽ là: 1234
+
+# a = input("Nhập số a: ")
+# n1 = int("%s" % a)
+# n2 = int("%s%s" % (a, a))
+# n3 = int("%s%s%s" % (a, a, a))
+# n4 = int("%s%s%s%s" % (a, a, a, a))
+# print("Tổng cần tính là: ", n1+n2+n3+n4)
+
+# EX 21
+# Sử dụng một danh sách để lọc các số lẻ từ danh sách được người dùng nhập vào.
+# Giả sử đầu vào là: 1,2,3,4,5,6,7,8,9 thì đầu ra phải là: 1,3,5,7,9
+# odd = lẻ , even = chẵn
+
+# values = input("Nhập dãy số của bạn, cách nhau bởi dấu phẩy: ")
+# odd = [x for x in values.split(",") if int(x) % 2 != 0]
+# even = [x for x in values.split(",") if int(x) % 2 == 0]
+# print(",".join(odd))
+# print(",".join(even))
+
+# EX 22
+# Viết chương trình tính số tiền thực của một tài
+# khoản ngân hàng dựa trên nhật ký giao dịch được nhập vào từ giao diện điều khiển.
+# Định dạng nhật ký được hiển thị như sau:
+# D 100
+# W 200
+# (D là tiền gửi, W là tiền rút ra).
+
+# import sys
+# netAmount = 0
+# while True:
+#     s = input("Nhập nhật ký giao dịch: ")
+#     if not s:
+#         break
+#     values = s.split(" ")
+#     operation = values[0]
+#     amount = int(values[1])
+#     if operation == "D":
+#         netAmount += amount
+#     elif operation == "W":
+#         netAmount -= amount
+#     else:
+#         pass
+# print(netAmount)
+
+# EX 23
+# nhập một dãy số nguyên, sau đó kiểm tra xem nó có khả đối xứng không?
+# Nếu 0, hãy biến đổi nó để được một dãy đối xứng.
+#
+# def kiem_tra_doi_xung(lst):
+#     return lst == lst[::-1]
+# def convert_doi_xung(lst):
+#     if kiem_tra_doi_xung(lst):
+#         return lst
+#     else:
+#         for i in range(len(lst)//2):
+#             if lst[i] != lst[-i-1]:
+#                 for j in range(i+1, len(lst)):
+#                     if lst[j] == lst[-i-1]:
+#                         lst[i], lst[j] = lst[j], lst[i]
+#                         break
+#         return lst
+#
+# lst = list(map(int, input("Nhập dãy số nguyên, cách nhau bởi dấu cách: ").split()))
+#
+# if kiem_tra_doi_xung(lst):
+#     print("Dãy số đã đối xứng.")
+# else:
+#     new_lst = convert_doi_xung(lst)
+#     if kiem_tra_doi_xung(new_lst):
+#         print("Dãy số đã khả đối xứng và biến đổi thành dãy số đối xứng: ", new_lst)
+#     else:
+#         print("Dãy số không khả đối xứng.")
+
+# EX 24
+# Viết chương trình Python nhập một mảng hai chiều các số thực A (m hàng, n cột) từ bàn phím.
+# a. Tìm giá trị lớn nhất và nhỏ nhất trên mỗi cột
+# b. Tìm phần tử lớn nhất và phần tử nhỏ nhất của mảng A cùng các chỉ số hàng và cột của 2 phần tử này.
+# c. Trong mảng A có bao nhiêu phần tử bằng phần tử lớn nhất.
+
+# using numpy
+# import numpy as np
+#
+# # Nhập mảng A từ bàn phím
+# m, n = map(int, input("Nhập số hàng và số cột của mảng A (cách nhau bởi dấu cách): ").split())
+# A = np.zeros((m, n))
+# for i in range(m):
+#     row = list(map(float, input(f"Nhập dòng {i+1} của mảng A, cách nhau bởi dấu cách: ").split()))
+#     A[i, :] = row
+#
+# # Tìm giá trị lớn nhất và nhỏ nhất trên mỗi cột
+# max_col = np.amax(A, axis=0)
+# min_col = np.amin(A, axis=0)
+# print("Giá trị lớn nhất trên mỗi cột:", max_col)
+# print("Giá trị nhỏ nhất trên mỗi cột:", min_col)
+#
+# # Tìm phần tử lớn nhất và phần tử nhỏ nhất của mảng A cùng với chỉ số hàng và cột của 2 phần tử này
+# max_val = np.amax(A)
+# max_idx = np.unravel_index(np.argmax(A), A.shape)
+# min_val = np.amin(A)
+# min_idx = np.unravel_index(np.argmin(A), A.shape)
+# print("Phần tử lớn nhất của mảng A là", max_val, "ở dòng", max_idx[0]+1, "cột", max_idx[1]+1)
+# print("Phần tử nhỏ nhất của mảng A là", min_val, "ở dòng", min_idx[0]+1, "cột", min_idx[1]+1)
+#
+# # Tính số phần tử bằng phần tử lớn nhất
+# count_max = np.count_nonzero(A == max_val)
+# print("Số phần tử bằng phần tử lớn nhất là:", count_max)
+
+# not using numpy
+# Hàm nhập mảng A từ bàn phím
+# def input_array(m, n):
+#     A = []
+#     for i in range(m):
+#         row = list(map(float, input(f"Nhập hàng {i+1}, cách nhau bởi dấu cách: ").split()))
+#         A.append(row)
+#     return A
+# # Hàm tìm giá trị lớn nhất và nhỏ nhất trên mỗi cột của mảng A
+# def find_max_min_per_col(A):
+#     m, n = len(A), len(A[0])
+#     max_per_col = [max([A[i][j] for i in range(m)]) for j in range(n)]
+#     min_per_col = [min([A[i][j] for i in range(m)]) for j in range(n)]
+#     return max_per_col, min_per_col
+# # Hàm tìm phần tử lớn nhất và nhỏ nhất của mảng A cùng các chỉ số hàng và cột
+# def find_max_min_index(A):
+#     max_val, min_val = A[0][0], A[0][0]
+#     max_row, max_col, min_row, min_col = 0, 0, 0, 0
+#     m, n = len(A), len(A[0])
+#     for i in range(m):
+#         for j in range(n):
+#             if A[i][j] > max_val:
+#                 max_val = A[i][j]
+#                 max_row, max_col = i, j
+#             if A[i][j] < min_val:
+#                 min_val = A[i][j]
+#                 min_row, min_col = i, j
+#     return max_val, max_row, max_col, min_val, min_row, min_col
+# # Hàm đếm số phần tử trong mảng A bằng phần tử lớn nhất
+# def count_max_value(A):
+#     max_val = max([max(row) for row in A])
+#     count = 0
+#     for row in A:
+#         count += row.count(max_val)
+#     return count
+# # Nhập mảng A từ bàn phím
+# m, n = map(int, input("Nhập số hàng và số cột của mảng A, cách nhau bởi dấu cách: ").split())
+# A = input_array(m, n)
+# # Tìm giá trị lớn nhất và nhỏ nhất trên mỗi cột của mảng A
+# max_per_col, min_per_col = find_max_min_per_col(A)
+# print("Giá trị lớn nhất trên mỗi cột: ", max_per_col)
+# print("Giá trị nhỏ nhất trên mỗi cột: ", min_per_col)
+# # Tìm phần tử lớn nhất và nhỏ nhất của mảng A cùng các chỉ số hàng và cột
+# max_val, max_row, max_col, min_val, min_row, min_col = find_max_min_index(A)
+# print(f"Phần tử lớn nhất: {max_val}, hàng: {max_row+1}, cột: {max_col+1}")
+# print(f"Phần tử nhỏ nhất: {min_val}, hàng: {min_row+1}, cột: {min_col+1}")
+# # Đếm số phần tử trong mảng
+# count = count_max_value(A)
+# print(f"Số phần tử bằng giá trị lớn nhất ({max_val}) trong mảng A: {count}")
+
+# EX 25
+# Các tiêu chí kiểm tra mật khẩu bao gồm:
+# 1. Ít nhất 1 chữ cái nằm trong [a-z]
+# 2. Ít nhất 1 số nằm trong [0-9]
+# 3. Ít nhất 1 kí tự nằm trong [A-Z]
+# 4. Ít nhất 1 ký tự nằm trong [$ # @]
+# 5. Độ dài mật khẩu tối thiểu: 6
+# 6. Độ dài mật khẩu tối đa: 12
+# Chương trình phải chấp nhận một chuỗi mật khẩu phân tách nhau bởi dấu phẩy và kiểm tra xem chúng có đáp ứng những tiêu chí trên hay không.
+# Mật khẩu hợp lệ sẽ được in, mỗi mật khẩu cách nhau bởi dấu phẩy.
+# Ví dụ mật khẩu nhập vào chương trình là: ABd1234@1,a F1#,2w3E*,2We3345 Thì đầu ra sẽ là: ABd1234@1
+
+# import re
+# value = []
+# items = [x for x in input("Nhập mật khẩu: ").split(',')]
+# for p in items:
+#     if len(p) < 6 or len(p) > 12:
+#         continue
+#     else:
+#         pass
+#     if not re.search("[a-z]",p):
+#         continue
+#     elif not re.search("[0-9]",p):
+#         continue
+#     elif not re.search("[A-Z]",p):
+#         continue
+#     elif not re.search("[$#@]",p):
+#         continue
+#     elif re.search("\s",p):
+#         continue
+#     else:
+#         pass
+#     value.append(p)
+# print(",".join(value))
+
+# EX 26
+# Viết chương trình sắp xếp tuple (name, age, score) theo thứ tự tăng dần, name là string, age và height là number.
+# Tuple được nhập vào bởi người dùng. Tiêu chí sắp xếp là:
+# Sắp xếp theo name sau đó sắp xếp theo age, sau đó sắp xếp theo score. Ưu tiên là tên > tuổi > điểm.
+# Nếu đầu vào là:
+# Tom,19,80
+# John,20,90
+# Jony,17,91
+# Jony,17,93
+# Json,21,85
+# Thì đầu ra sẽ là:[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
+
+import operator
+l = []
+while True:
+    s = input()
+    if not s:
+       break
+    l.append(tuple(s.split(",")))
+print(sorted(l, key=operator.itemgetter(0, 1, 2)))
