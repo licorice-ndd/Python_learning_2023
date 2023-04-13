@@ -790,11 +790,87 @@ print(num_int + num_str)
 # Json,21,85
 # Thì đầu ra sẽ là:[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
 
-import operator
-l = []
-while True:
-    s = input()
-    if not s:
-       break
-    l.append(tuple(s.split(",")))
-print(sorted(l, key=operator.itemgetter(0, 1, 2)))
+# import operator
+# l = []
+# while True:
+#     s = input()
+#     if not s:
+#        break
+#     l.append(tuple(s.split(",")))
+# print(sorted(l, key=operator.itemgetter(0, 1, 2)))
+
+# EX 27
+# Xác định một class với generator có thể lặp lại các số nằm trong khoảng 0 và n, và chia hết cho 7
+# def putNumbers(n):
+#     i = 0
+#     while i<n:
+#         j=i
+#         i=i+1
+#         if j%7==0:
+#             yield j
+# for i in putNumbers (100):
+#      print (i)
+
+# EX 28
+# Viết chương trình tính tần suất các từ từ input. Output được xuất ra sau khi đã sắp xếp theo bảng chữ cái.
+# New to Python or choosing between Python 2 and Python 3? Read Python 2 or Python 3.
+# 2:2
+# 3.:1
+# 3?:1
+# New:1
+# Python:5
+# Read:1
+# and:1
+# between:1
+# choosing:1
+# or:2
+# to:1
+
+# freq = {} # frequency of words in text
+# line = input()
+# for word in line.split():
+#     freq[word] = freq.get(word,0)+1
+# words = sorted(freq.keys())
+# for w in words:
+#     print ("%s:%d" % (w,freq[w]))
+
+# EX 29 : Định nghĩa 1 hàm có thể tính tổng hai số.
+# def SumFunction(number1, number2): #định nghĩa hàm tính tổng
+#     return number1+number2
+# print (SumFunction(5,7)) #in tổng 2 số 5 và 7
+
+# EX 30 : Định nghĩa một hàm có thể chuyển số nguyên thành chuỗi và in nó ra giao diện điều khiển
+# def printValue(n):
+#     print (str(n))
+# printValue(3)
+
+# EX 31 : Định nghĩa hàm có thể nhận hai số nguyên trong dạng chuỗi và tính tổng của chúng, sau đó in tổng ra giao diện điều khiển.
+# def printValue(s1,s2):
+#     print (int(s1)+int(s2))
+# printValue("3","4") #Kết quả là 7
+
+# EX 32 : Định nghĩa hàm có thể nhận 2 chuỗi từ input và nối chúng sau đó in ra giao diện điều khiển
+# def printValue(s1,s2):
+#     print (s1+s2)
+# printValue("3","4") #Kết quả là 34
+
+# EX 33 : Định nghĩa một hàm có input là 2 chuỗi và in chuỗi có độ dài lớn hơn trong giao diện điều khiển. Nếu 2 chuỗi có chiều dài như nhau thì in tất cả các chuỗi theo dòng.
+# def printValue(s1,s2):
+#     len1 = len(s1)
+#     len2 = len(s2)
+#     if len1>len2:
+#         print (s1)
+#     elif len2>len1:
+#         print (s2)
+#     else:
+#         print(s1)
+#         print (s2)
+# printValue("one","three")
+
+# EX 34 : Định nghĩa hàm có thể chấp nhận input là số nguyên và in "Đây là một số chẵn" nếu nó chẵn và in "Đây là một số lẻ" nếu là số lẻ.
+# def checkValue(n):
+#     if n%2 == 0:
+# print ("Đây là một số chẵn")
+#     else:
+#        print ("Đây là một số lẻ")
+# checkValue(7)
