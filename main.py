@@ -874,3 +874,559 @@ print(num_int + num_str)
 #     else:
 #        print ("Đây là một số lẻ")
 # checkValue(7)
+
+# EX 35 : Định nghĩa một hàm có thể in dictionary chứa key là các số từ 1 đến 3 (bao gồm cả hai số) và các giá trị bình phương của chúng.
+# def printDict():
+#     d=dict()
+#     d[1]=1
+#     d[2]=2**2
+#     d[3]=3**2
+#     print(d)
+# printDict()
+
+# EX 36 : Định nghĩa một hàm có thể in dictionary chứa các key là số từ 1 đến 20 (bao gồm cả 1 và 20) và các giá trị bình phương của chúng.
+
+# def printDict():
+#     d=dict()
+#     for i in range(1,21):
+#        d[i]=i**2
+#     print (d)
+# printDict()
+
+# 37 : Định nghĩa một hàm có thể tạo dictionary, chứa các key là số từ 1 đến 20 (bao gồm cả 1 và 20) và các giá trị bình phương của chúng. Hàm chỉ in các giá trị mà thôi.
+# Sử dụng dict[key]=value để nhập mục vào dictionary.
+# Sử dụng toán từ ** để lấy bình phương của một số.
+# Sử dụng range() cho các vòng lặp.
+# Sử dụng keys() để di lặp các key trong dictionary. Có thể sử dụng item() để nhận cặp key/value.
+
+# def printDict():
+#     d = dict()
+#     for i in range(1, 21):
+#         d[i] = i**2
+#     for (k, v) in d.items():
+#         print(v)
+# printDict()
+
+# 38 : Định nghĩa một hàm có thể tạo ra một dictionary chứa key là những số từ 1 đến 20 (bao gồm cả 1 và 20) và các giá trị bình phương của key. Hàm chỉ cần in các key.
+# def printDict():
+#  d=dict()
+#  for i in range(1,21):
+#     d[i]=i**2
+#  for k in d.keys():
+#        print (k)
+# printDict()
+
+# 39 : Định nghĩa một hàm có thể tạo và in list chứa các giá trị bình phương của các số từ 1 đến 20 (tính cả 1 và 20).
+# def printList():
+#     li=list()
+#     for i in range(1,21):
+#         li.append(i**2)
+#     print (li)
+# printList()
+
+# 40 : Định nghĩa một hàm có thể tạo list chứa các giá trị bình phương của các số từ 1 đến 20 (bao gồm cả 1 và 20) và in 5 mục đầu tiên trong list.
+# Sử dụng toán tử ** để lấy giá trị bình phương.
+# Sử dụng range() cho vòng lặp.
+# Sử dụng list.append() để thêm giá trị vào list.
+# Sử dụng [n1:n2] để cắt list
+
+# def printList():
+#     li = list()
+#     for i in range(1,21):
+#         li.append(i**2)
+#     print(li[:5])
+#
+# printList()
+
+# EX 41 : Định nghĩa một hàm có thể tạo ra list chứa các giá trị bình phương của các số từ 1 đến 20 (bao gồm cả 1 và 20), rồi in 5 mục cuối cùng trong list.
+# def printList():
+#     li=list()
+#     for i in range(1,21):
+#         li.append(i**2)
+#     print (li[-5:])
+# printList()
+
+# EX 42 :  Định nghĩa một hàm có thể tạo list chứa giá trị bình phương của các số từ 1 đến 20 (bao gồm cả 1 và 20). Sau đó in tất cả các giá trị của list, trừ 5 mục đầu tiên.
+# def printList():
+#     li=list()
+#     for i in range(1,21):
+#         li.append(i**2)
+#     print (li[5:])
+# printList()
+
+# EX 43 : Định nghĩa 1 hàm có thể tạo và in một tuple chứa các giá trị bình phương của các số từ 1 đến 20 (tính cả 1 và 20).
+# def printTuple():
+#     li=list()
+#     for i in range(1,21):
+#         li.append(i**2)
+#     print (tuple(li))
+#
+# printTuple()
+
+# EX 44 : Với tuple (1,2,3,4,5,6,7,8,9,10) cho trước, viết một chương trình in một nửa số giá trị đầu tiên trong 1 dòng và 1 nửa số giá trị cuối trong 1 dòng.
+# tp=(1,2,3,4,5,6,7,8,9,10)
+# tp1=tp[:5]
+# tp2=tp[5:]
+# print (tp1)
+# print (tp2)
+
+# 45 : Viết một chương trình để tạo tuple khác, chứa các giá trị là số chẵn trong tuple (1,2,3,4,5,6,7,8,9,10) cho trước.
+# tp=(1,2,3,4,5,6,7,8,9,10)
+# li=list()
+# for i in tp:
+#  if tp[-i]%2==0:
+#        li.append(tp[i])
+#
+# tp2=tuple(li)
+# print (tp2)
+
+# 46 : Viết một chương trình để tạo ra và in tuple chứa các số chẵn được lấy từ tuple (1,2,3,4,5,6,7,8,9,10).
+# tp=(1,2,3,4,5,6,7,8,9,10)
+# li=list()
+# for i in tp:
+#     if tp[i-1]%2==0:
+#         li.append(tp[i-1])
+#         tp2=tuple(li)
+# print (tp2)
+
+# EX 47 : Viết một chương trình Python nhận chuỗi nhập vào bởi người dùng, in "Yes" nếu chuỗi là "yes" hoặc "YES" hoặc "Yes", nếu không in "No".
+# s = input ("Nhập chuỗi: ")
+# if s == "yes" or s == "YES" or s == "Yes":
+#    print ("Yes")
+# else:
+#     print ("No")
+
+# EX 48 : Viết chương trình Python có thể lọc các số chẵn trong danh sách sử dụng hàm filter. Danh sách là [1,2,3,4,5,6,7,8,9,10].
+# li = [1,2,3,4,5,6,7,8,9,10]
+# evenNumbers = list(filter (lambda x: x% 2 == 0, li))
+# print (evenNumbers)
+
+# 49 : Viết chương trình Python dùng map() để tạo list chứa các giá trị bình phương của các số trong [1,2,3,4,5,6,7,8,9,10].
+# li = [1,2,3,4,5,6,7,8,9,10]
+# squaredNumbers = list(map (lambda x: x ** 2, li))
+# print (squaredNumbers)
+
+# 50 : Viết chương trình Python dùng map() và filter() để tạo list chứa giá trị bình phương của các số chẵn trong [1,2,3,4,5,6,7,8,9,10].
+# Dùng map() để tạo list.
+# Dùng filter() để lọc thành phần trong list.
+# Dùng lambda để định nghĩa hàm chưa biết.
+
+# li = [1,2,3,4,5,6,7,8,9,10]
+# squareOfEvenNumbers = list (map (lambda x: x ** 2, filter (lambda x: x% 2 == 0, li)))
+# print (squareOfEvenNumbers)
+
+# 51 : Viết chương trình Python dùng filter() để tạo danh sách chứa các số chẵn trong đoạn [1,20].
+# evenNumbers = list(filter (lambda x: x% 2 == 0, range (1,21)))
+# print (evenNumbers)
+
+# 52 : Viết chương trình Python sử dụng map() để tạo list chứa giá trị bình phương của các số trong đoạn [1,20].
+# squaredNumbers = list(map(lambda x: x ** 2, range (1,21)))
+# print (squaredNumbers)
+
+# 53 : Định nghĩa một class có tên là Vietnam, với static method là printNationality. Sử dụng @staticmethod để định nghĩa class với static method.
+# class Vietnam (object):
+#     @staticmethod
+#     def printNationality ():
+#         print ("Vietnam")
+# VietnamVodich = Vietnam ()
+# VietnamVodich.printNationality ()
+# Vietnam.printNationality ()
+
+# 54 : Định nghĩa một class tên Vietnam và class con của nó là Hanoi. Sử dụng Subclass(ParentClass) để định nghĩa một class con.
+# class Vietnam(object):
+#     pass
+#
+# class Hanoi(Vietnam):
+#     pass
+# # Bài Python 51, Code by Quantrimang.com
+# VietnamVodich = Vietnam()
+# NguoiHanoi = Hanoi()
+# print (VietnamVodich)
+# print (NguoiHanoi)
+
+# 55 : Định nghĩa một class có tên là Circle có thể được xây dựng từ bán kính. Circle có một method có thể tính diện tích.
+# Sử dụng def methodName(self) để định nghĩa method.
+
+# class Circle(object):
+#     def __init__(self, r):
+#        self.radius = r
+# # Bài Python 52, Code by Quantrimang.com
+#     def area(self):
+#        return self.radius**2*3.14
+#
+# aCircle = Circle(2)
+# print (aCircle.area())
+
+# 56 : Định nghĩa class có tên là Hinhchunhat được xây dựng bằng chiều dài và chiều rộng. Class Hinhchunhat có method để tính diện tích.
+# class Hinhchunhat(object):
+#     def __init__(self, l, w):
+#        self.dai = l
+#        self.rong = w
+#     def area(self):
+#        return self.dai*self.rong
+# aHinhchunhat = Hinhchunhat(10,2)
+# print (aHinhchunhat.area())
+
+# 57 : Định nghĩa một class có tên là Shape và class con là Square. Square có hàm init để lấy đối số là chiều dài. Cả 2 class đều có hàm area để in diện tích của hình, diện tích mặc định của Shape là 0.
+# class Shape(object):
+#     def __init__(self):
+#        pass
+#
+#     def area(self):
+#        return 0
+# class Square(Shape):
+#     def __init__(self, l):
+#        Shape.__init__(self)
+#        self.length = l
+#
+#     def area(self):
+#        return self.length*self.length
+#
+# aSquare= Square(3)
+# print (aSquare.area())
+
+# 58 :  Đưa ra một RuntimeError exception.
+# raise RuntimeError('something wrong')
+
+#or
+
+# class RuntimeError(Exception):
+#     def __init__(self, mismatch):
+#        Exception.__init__(self, mismatch)
+# try:
+#     print ("And now, the Vocational Guidance Counsellor Sketch.")
+#     raise RuntimeError("Does not have proper hat")
+#     print ("This print statement will not be reached.")
+# except RuntimeError as problem:
+#     print ("Vocation problem: {0}".format(problem))
+
+# 59 : Viết một chương trình chấp nhận chuỗi từ được phân tách bằng khoảng trống và in các từ chỉ gồm chữ số.
+# import re
+# s = input()
+# print (re.findall("\d+",s))
+
+# 60 : Viết chương trình để đọc chuỗi ASCII và chuyển đổi nó sang một chuỗi Unicode được mã hóa bằng UTF-8.
+
+# s = input()
+# v = s.encode() # có thể dùng v=s.encode('utf-8')
+# print (v)
+
+# 61 :  Viết một chương trình tính 1/2 + 2/3 + 3/4 + ... + n/(n + 1) với một n là số được nhập vào (n> 0).
+
+# n=int(input("Nhập số n >0: "))
+# sum=0.0
+# for i in range(1,n+1):
+#     sum += float(float(i)/(i+1))
+# print (sum)
+
+# 62 : Viết chương trình tính: f(n)=f(n-1)+100 khi n>0 và f(0)=1, với n là số được nhập vào (n>0).
+# def f(n):
+#     if n==0:
+#         return 0
+#     else:
+#         return f(n-1)+100
+# n=int(input("Nhập số n>0: "))
+# print (f(n))
+
+# 63 : Dãy Fibonacci được tính dựa trên công thức sau:
+# f(n)=0 nếu n=0
+# f(n)=1 nếu n=1
+# f(n)=f(n-1)+f(n-2) nếu n>1
+# Hãy viết chương trình tính giá trị của f(n) với n là số được người dùng nhập vào.
+# Ví dụ: Nếu n được nhập vào là 7 thì đầu ra của chương trình sẽ là 13.
+
+# def f(n):
+#     if n == 0: return 0
+#     elif n == 1: return 1
+#     else: return f(n-1)+f(n-2)
+# n=int(input("Nhập số n: "))
+# print (f(n))
+
+# 64 : Dãy Fibonacci được tính dựa trên công thức sau:
+# f(n)=0 nếu n=0
+# f(n)=1 nếu n=1
+# f(n)=f(n-1)+f(n-2) nếu n>1
+# Hãy viết chương trình sử dụng list comprehension để in dãy Fibonacci dưới dạng tách biệt bằng dấu ",", n được người dùng nhập vào.
+# Ví dụ: Nếu n được nhập vào là 7 thì đầu ra của chương trình sẽ là: 0,1,1,2,3,5,8,13
+# Chúng ta có thể định nghĩa hàm đệ quy trong Python.
+# Sử dụng list comprehension để tạo ra list từ list hiện có.
+# Sử dụng string.join() để nối danh sách các chuỗi.
+
+# def f(n):
+#     if n == 0: return 0
+#     elif n == 1: return 1
+#     else: return f(n-1)+f(n-2)
+# n=int(input("Nhập số n: "))
+# values = [str(f(x)) for x in range(0, n+1)]
+# print (",".join(values))
+
+# 65 : Viết chương trình sử dụng generator để in số chẵn trong khoảng từ 0 đến n, cách nhau bởi dấu phẩy, n là số được nhập vào.
+# Ví dụ nếu n=10 được nhập vào thì đầu ra của chương trình là: 0,2,4,6,8,10
+
+# def EvenGenerator(n):
+#     i=0
+#     while i<=n:
+#         if i%2==0:
+#             yield i
+#         i+=1
+# n=int(input("Nhập n: "))
+# values = []
+# for i in EvenGenerator(n):
+#     values.append(str(i))
+# print ("Các số chẵn trong khoảng 0 và n là: ",",".join(values))
+
+# 66 : Viết chương trình sử dụng generator để in số chia hết cho 5 và 7 giữa 0 và n, cách nhau bằng dấu phẩy, n được người dùng nhập vào.
+# Ví dụ: Nếu n=100 được nhập vào thì đầu ra của chương trình là: 0,35,70.
+# def NumGenerator(n):
+#     for i in range(n+1):
+#         if i%5==0 and i%7==0:
+#             yield i
+# n=int(input("Nhập n: "))
+# values = []
+# for i in NumGenerator(n):
+#     values.append(str(i))
+#
+# print ("Các số chia hết cho 5 và 7 trong khoảng 0 và n là: ",",".join(values))
+
+# 67 : Viết các lệnh assert để xác minh rằng tất cả các số trong list [2,4,6,8] là chẵn.
+# li = [2,4,6,8]
+# for i in li:
+#  assert i%2==0
+
+# 68 : Viết chương trình chấp nhận biểu thức toán học cơ bản do người dùng nhập vào từ bảng điều khiển và in kết quả ước lượng ra ngoài màn hình.
+
+# expression = input("Nhập biểu thức cần tính: ")
+# print (eval(expression))
+# example : input = 3+5 => output = 8
+
+# 69 : Viết hàm tìm kiếm nhị phân để tìm các item trong một list đã được sắp xếp. Hàm sẽ trả lại chỉ số của phần tử được tìm thấy trong list.
+
+# import math
+# def bin_search(li, element):
+#     bottom = 0
+#     top = len(li)-1
+#     index = -1
+#     while top>=bottom and index==-1:
+#         mid = int(math.floor((top+bottom)/2.0))
+#         if li[mid]==element:
+#             index = mid
+#         elif li[mid]>element:
+#             top = mid-1
+#         else:
+#             bottom = mid+1
+#     return index
+# li=[2,5,7,9,11,17,222]
+# print (bin_search(li,11))
+# print (bin_search(li,12))
+
+# 70 : Tạo một số thập phân ngẫu nhiên, có giá trị nằm trong khoảng từ 10 đến 100 bằng cách sử dụng module math của Python.
+# import random
+# print (random.random()*100)
+
+# 71 : Tạo một số thập phân ngẫu nhiên, có giá trị nằm trong khoảng 5 đến 95, sử dụng module math của Python.
+# import random
+# print (random.random()*100-5)
+
+#72 : Viết chương trình xuất ra một số chẵn ngẫu nhiên trong khoảng 0 đến 10 (bao gồm cả 0 và 10), sử dụng module random và list comprehension.
+# import random
+# print (random.choice([i for i in range(11) if i%2==0]))
+
+# 73 : Vui lòng viết chương trình để xuất một số ngẫu nhiên, chia hết cho 5 và 7, từ 0 đến 200 (gồm cả 0 và 200), sử dụng module random và list comprehension.
+# import random
+# print (random.choice([i for i in range(201) if i%5==0 and i%7==0]))
+
+# 74 : Vui lòng viết chương trình để tạo một list với 5 số ngẫu nhiên từ 100 đến 200.
+# import random
+# print (random.sample(range(100,201), 5))
+
+# 75 : Viết chương trình tạo ngẫu nhiên list gồm 5 số chẵn nằm trong đoạn [100;200].
+# import random
+# print (random.sample([i for i in range(100,201) if i%2==0], 5))
+
+# 76 : Viết chương trình để tạo ngẫu nhiên một list gồm 5 số, chia hết cho 5 và 7, nằm trong đoạn [1;1000].
+# import random
+# print (random.sample([i for i in range(1,1001) if i%5==0 and i%7==0], 5))
+
+# 77 : Viết chương trình để in một số nguyên ngẫu nhiên từ 7 đến 15.
+# import random
+# print (random.randrange(7,16))
+
+# 78 : Viết chương trình để nén và giải nén string ""hello world!hello world!hello world!hello world!".
+# Sử dụng zlib.compress() và zlib.decompress() để nén và giải nén string.
+
+# import zlib
+# s = "hello world!hello world!hello world!hello world!"
+# t = zlib.compress(s)
+# print t
+# print zlib.decompress(t)
+
+#or
+
+#import zlib
+# s = "hello world!hello world!hello world!hello world!"
+# t = zlib.compress(s.encode("utf-8"))
+# print (t)
+# print (zlib.decompress(t))
+
+# 79 : Bạn hãy viết một chương trình để in thời gian thực thi (running time of execution) phép tính "1+1" 100 lần.
+# Sử dụng timeit() để đo thời gian chạy
+
+# from timeit import Timer
+# t = Timer("for i in range(100):1+1")
+# print (t.timeit())
+
+# 80 : Viết chương trình để trộn và in list [3,6,7,8]. Sử dụng shuffle() để trộn list.
+# from random import shuffle
+# li = [3,6,7,8]
+# shuffle(li)
+# print (li)
+
+# 81 : Viết một chương trình để tạo tất cả các câu có chủ ngữ nằm trong ["Anh","Em"], động từ nằm trong ["Chơi","Yêu"] và tân ngữ là ["Bóng đá","Xếp hình"].
+# Sử dụng list[index] để lấy phần tử từ list.
+
+# chu_ngu=["Anh","Em"]
+# dong_tu=["Chơi","Yêu"]
+# tan_ngu=["Bóng đá","Xếp hình"]
+# # Code by Quantrimang.com
+# for i in range(len(chu_ngu)):
+#     for j in range(len(dong_tu)):
+#         for k in range(len(tan_ngu)):
+#             cau = "%s %s %s." % (chu_ngu[i], dong_tu[j], tan_ngu[k])
+#             print (cau)
+
+# 82 : Viết chương trình in list sau khi xóa các số chẵn trong [5,6,77,45,22,12,24].
+
+# li = [5,6,77,45,22,12,24]
+# li = [x for x in li if x%2!=0]
+# print (li)
+
+# 83 : Sử dụng list comprehension để viết chương trình in list sau khi đã loại bỏ các số chia hết cho 5 và 7 trong [12,24,35,70,88,120,155].
+# li = [12,24,35,70,88,120,155]
+# li = [i for i in li if i%5!=0 or i%7!=0]
+# print (li)
+
+# 84 : Viết chương trình in list sau khi đã xóa số thứ 0, thứ 2, thứ 4, thứ 6 trong [12,24,35,70,88,120,155].
+# Sử dụng list comprehension để xóa một loạt phần tử trong list.
+# Sử dụng hàm enumerate() để lấy index, value của tuple.
+
+# li = [12,24,35,70,88,120,155]
+# a= [x for i,x in enumerate(li)if i%2!=0]
+# print (a)
+
+# 85 : Viết chương trình tạo mảng 3D 3*5*8 có mỗi phần tử là 0. Sử dụng list comprehension để tạo mảng.
+# array = [[ [0 for col in range(8)] for col in range(5)] for row in range(3)]
+# print (array)
+
+# 86 : Viết chương trình in list sau khi đã xóa số ở vị trí thứ 0, thứ 5, thứ 5 trong [12,24,35,70,88,120,155].
+# li = [12,24,35,70,88,120,155]
+# li = [x for (i,x) in enumerate(li) if i not in (0,4,5)]
+# print (li)
+
+# 87 : Viết chương trình in list sau khi đã xóa giá trị 24 trong [12,24,35,24,88,120,155].
+# li = [12,24,35,24,88,120,155]
+# li = [x for x in li if x!=24]
+# print (li)
+
+# 88 : Với 2 list cho trước: [1,3,6,78,35,55] và [12,24,35,24,88,120,155], viết chương trình để tạo list có phần tử là giao của 2 list đã cho.
+# Sử dụng set() và "&=" để thiết lập điểm giao.
+
+# list1=set([12,3,6,78,35,55,120])
+# list2=set([12,24,35,24,88,120,155])
+# list1 &= list2
+# li=list(list1)
+# print (li)
+
+# 89 : Viết chương trình in list từ list [12,24,35,24,88,120,155,88,120,155], sau khi đã xóa hết các giá trị trùng nhau. Sử dụng set() để lưu trữ các giá trị không bị trùng lặp.
+
+# def xoaTrung( li ):
+#     list_moi=[]
+#     xem = set()
+#     for i in li:
+#         if i not in xem:
+#             xem.add( i )
+#             list_moi.append(i)
+#     return list_moi
+#
+# li=[12,12,15,24,35,35,24,88,120,155,88,120,155]
+# print ("List sau khi xóa giá trị trùng là:",xoaTrung(li))
+
+# 90 : Định nghĩa class Nguoi và 2 class con của nó: Nam, Nu. Tất cả các class có method "getGender" có thể in "Nam" cho class Nam và "Nữ" cho class Nu.
+# Sử dụng Subclass(Parentclass) để định nghĩa 1 class con.
+
+# class Nguoi(object):
+#     def getGender(self):
+#         return "Unknown"
+# class Nam(Nguoi):
+#     def getGender(self):
+#         return "Nam"
+# class Nu(Nguoi):
+#     def getGender(self):
+#         return "Nữ"
+# aNam = Nam()
+# aNu= Nu()
+# print (aNam.getGender())
+# print (aNu.getGender())
+
+# 91 : Viết chương trình đếm và in số ký tự của chuỗi do người dùng nhập vào.
+#
+# Ví dụ:
+#
+# Nếu chuỗi nhập vào là quantrimang.com thì đầu ra sẽ là:
+#
+# q,1
+# u,1
+# a,2
+# n,2
+# t,1
+# r,1
+# i,1
+# m,2
+# g,1
+# .,1
+# c,1
+# o,1
+
+# Sử dụng dict để lưu trữ các cặp key/value.
+# Sử dụng dict.get() để tra cứu key với giá trị mặc định.
+
+# dic = {}
+# chuoi=input("Nhập chuỗi cần đếm ký tự: ")
+# # Code by Quantrimang.com
+# for c in chuoi:
+#     dic[c] = dic.get(c,0)+1
+# print ('\n'.join(['%s,%s' % (k, v) for k, v in dic.items()]))
+
+# 92 : Viết chương trình nhận chuỗi đầu vào từ giao diện điều khiển và in nó theo thứ tự ngược lại.
+# Ví dụ nếu chuỗi nhập vào là:
+# i love you
+# Thì kết quả đầu ra là:
+# uoy evol i
+
+# chuoi=input("Nhập chuỗi vào đây: ")
+# chuoi = chuoi[::-1]
+# print (chuoi)
+
+# 93 : Viết chương trình nhận chuỗi do người dùng nhập vào và in các ký tự có chỉ số chẵn.
+# Ví dụ: Nếu chuỗi sau được nhập vào: q1u2a3n4t5r6i7m8a9n4g5.6c7o8m, thì đầu ra sẽ là: quantrimang.com. Sử dụng list[::2] để lặp list cách 2 vị trí.
+
+# chuoi=input("Nhập chuỗi vào đây: ")
+# chuoi = chuoi[::2]
+# print (chuoi)
+
+# 94 : Viết chương trình in tất cả các hoán vị của [1,2,3]. Sử dụng itertools.permutations() để lấy hết các hoán vị của list.
+# import itertools
+# print (list(itertools.permutations([1,2,3])))
+
+# 95 : Viết chương trình để giải 1 câu đố cổ của Trung Quốc: Một trang trại thỏ và gà có 35 đầu, 94 chân, hỏi số thỏ và gà là bao nhiêu?
+
+# def giai(dau,chan):
+#     klg='Không có dáp án phù hợp!'
+#     for i in range(dau+1):
+#         j=dau-i
+#         if 2*i+4*j==chan:
+#             return i,j
+#     return klg,klg
+# dau=35
+# chan=94
+# dap_an=giai(dau,chan)
+# print (dap_an)
