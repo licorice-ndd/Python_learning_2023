@@ -102,7 +102,7 @@
 #         conn.commit()
 #         table = conn.execute('select c.CID, c.CName, s.SName from Subject s join Course c on s.SID = c.SID '
 #                                 'where SName = ? or SName = ? '
-#                                 'order by SName asc', ('Database', 'English'))
+#                                 'order by SName desc', ('Database', 'English')) # or asc
 # print("Course list:")
 # print("ID".ljust(10, ' '), "Course Name".rjust(10, ' '), "Subject Name".rjust(10, ' '))
 # for row in table:
@@ -141,6 +141,7 @@
 #         count = count +1
 # print(f"Your got your total in {count} throws")
 # Text.txt
+
 # Q2 read file and combinations number in that
 # file = input("Enter file: ")
 # f = open(file, "r")
@@ -156,6 +157,107 @@
 # print(num_list)
 
 # (PE) SPRING 22 CA 13H-16H30
+
+# Q1 solu
+# def DecimalToBinary(num):
+#     if num >= 1:
+#         DecimalToBinary(num//2)
+#     if num != 0:
+#         print(num % 2, end = '')
+#
+# def DecimalToHexadecimal(num):
+#     if num >= 16:
+#         DecimalToHexadecimal(num // 16)
+#     if num != 0:
+#         val = num % 16
+#         if val < 10:
+#             print(val, end='')
+#         else:
+#             print(chr(ord('A') + val - 10), end='')
+#
+# def decimalToOctal(num):
+#     if num >= 8:
+#         decimalToOctal(num // 8)
+#     if num != 0:
+#         print(num % 8, end='')
+
+# while True:
+#     number = input("Enter a positive integer number : ")
+#     try:
+#         usVal = int(number)
+#         if usVal < 0:
+#             print("the number must be positive.")
+#             continue
+#         break
+#
+#     except ValueError:
+#         print("the number must be a positive integer")
+#
+# print("%d is converted to binary : " %usVal, end = "")
+# DecimalToHexadecimal(usVal)
+
+# Q2 solu
+# import re
+# fname = input("enter file : ")
+# fhand = open(fname, "r")
+# list = []
+#
+# print("troubleshoot wired LAN related issues:")
+#
+# for line in fhand:
+#     line = line.strip()
+#     if line.startswith("Name: "):
+#         name = line[20:].split("-")[0]
+#         list.append(name)
+#
+# def countFreq(mylist):
+#     freq = {}
+#     for item in mylist:
+#         if (item in freq):
+#             freq[item] += 1
+#         else:
+#             freq[item] = 1
+#
+#     for i in sorted(freq):
+#         print(str(i) + ": " + str(freq[i]))
+#
+# countFreq(1)
+
+# 12/12/2021 Q2
+def isOrdered(words_list):
+
+    result = []
+    for word in words_list:
+        # print(word)
+
+        i = 0
+        l = len(word) - 1
+        check = True
+        while i < l:
+
+            if ord(word[i]) > ord(word[i + 1]):
+
+                check = False
+                break
+            else:
+                i += 1
+
+        if check:
+            result.append(word)
+
+    return result
+
+filename =input("Enter file: ")
+words_list = []
+with open(filename) as file_in:
+    globals()
+    for word in file_in.readlines():
+        words_list.append(word.strip('\n'))
+
+
+answer = isOrdered(words_list)
+print("The ordered words: ")
+print(answer)
 
 #khai bao bien trong python
 """""
